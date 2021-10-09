@@ -11,8 +11,10 @@ import DataSetView from './components/DataSetView/DataSetView';
 import { treeData } from './common/const';
 
 function App() {
-  const [view, setView] = useState(false);
-  const [title, setTitle] = useState();
+  const [view, setView] = useState(true);
+  const [catigory, setCatigory] = useState({title: 'Clients'});
+  const [dataSet, setDataSet] = useState();
+
 
   const { Content, Sider } = Layout;
 
@@ -25,11 +27,16 @@ function App() {
         <Route path="/partner/:name">
           <Layout>
             <Sider style={{height: "100vh"}}> 
-              <CatalogTree setView={setView} treeData={treeData} />
+              <CatalogTree 
+                setView={setView} 
+                setCatigory={setCatigory} 
+                setDataSet={setDataSet} 
+                treeData={treeData} 
+              />
             </Sider>
             <Layout>
               <Content>
-                {view ? <CatigoryesView/> : <DataSetView/>}
+                {view ? <CatigoryesView catigory={catigory}/> : <DataSetView dataSet={dataSet} />}
               </Content>
             <CatalogPage/>
             </Layout>

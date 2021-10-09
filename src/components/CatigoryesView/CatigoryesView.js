@@ -5,15 +5,15 @@ import styles from './CatigoryesView.module.css'
 
 import {dataSets} from '../../common/const'
 
-function CatigoryesView() {
+function CatigoryesView({ catigory }) {
     const {TabPane} = Tabs;
 
-    const {name} = useParams();
+    const { name } = useParams();
 
     return (
         <div className={styles.container}>
             <div className={styles.header}>
-                <h1 className={styles.title}>Название категории</h1>
+                <h1 className={styles.title}>{ catigory.title }</h1>
                 <div className={styles.description}>Очень подробное описание категории или без него</div>
             </div>
             <div>
