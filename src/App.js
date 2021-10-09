@@ -8,6 +8,7 @@ import MainPage from './MainPage/MainPage';
 import CatalogTree from './components/CatalogTree/CatalogTree';
 import CatigoryesView from './components/CatigoryesView/CatigoryesView';
 import DataSetView from './components/DataSetView/DataSetView';
+import Header from './components/Header/Header'
 import { treeData } from './common/const';
 import GetDatasets from './GetDatasets';
 
@@ -27,6 +28,7 @@ function App() {
             <MainPage />
           </Route>
           <Route path='/partner/:name'>
+              <Header/>
             <Layout>
               <Sider>
                 <CatalogTree 
