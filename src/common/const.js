@@ -1,4 +1,22 @@
-export const mockPartner = [{id: 1, name: 'Aple'}, {id: 2, name: 'Nike'}];
+export const mockPartner = [
+  {
+    id: 1,
+    path: 'Donstroy',
+    name: 'ГК «Донстрой»',
+    img: 'https://www.vtb.ru/-/media/Feature/Companies/donstroy.png'
+  }, {
+    id: 2,
+    path: 'GALS',
+    name: 'Группа Компаний ГАЛС',
+    img: 'https://www.vtb.ru/-/media/Feature/Companies/gals.png'
+  },
+  {
+      id: 3,
+      path: 'PIK',
+      name: 'ПИК',
+      img: 'https://www.vtb.ru/-/media/Feature/Companies/pik-new.png'
+}
+];
  
 export const treeData = [
   {
@@ -31,38 +49,55 @@ export const treeData = [
 ];
 
 export const dataSets = { 
-  Aple: [
+  Donstroy: [
     {
       id: 1,
       type: 'popular', 
-      title: 'DataSet-Clients-Aple-1'
+      title: 'DataSet-Clients-Donstroy-1'
     }, 
     {
       id: 2,
       type: 'new', 
-      title: 'DataSet-Items-Aple-1'
+      title: 'DataSet-Items-Donstroy-1'
     },
     {
       id: 3,
       type: 'popular', 
-      title: 'DataSet-Items-Aple-2'
+      title: 'DataSet-Items-Donstroy-2'
     }, 
   ], 
-  Nike: [
+  GALS: [
     {
       id: 1,
       type: 'popular', 
-      title: 'DataSet-Clients-Nike-1'
+      title: 'DataSet-Clients-GALS-1'
     }, 
     {
       id: 2,
       type: 'new', 
-      title: 'DataSet-Items-Nike-1'
+      title: 'DataSet-Items-GALS-1'
     },
     {
       id: 3,
       type: 'popular', 
-      title: 'DataSet-Items-Nike-2'
+      title: 'DataSet-Items-GALS-2'
+    }, 
+  ], 
+  PIK: [
+    {
+      id: 1,
+      type: 'popular', 
+      title: 'DataSet-Clients-PIK-1'
+    }, 
+    {
+      id: 2,
+      type: 'new', 
+      title: 'DataSet-Items-PIK-1'
+    },
+    {
+      id: 3,
+      type: 'popular', 
+      title: 'DataSet-Items-PIK-2'
     }, 
   ]
 };

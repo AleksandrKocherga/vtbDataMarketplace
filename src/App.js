@@ -14,7 +14,7 @@ import { treeData } from './common/const';
 function App() {
   const [view, setView] = useState(false);
   const [title, setTitle] = useState();
-  
+
   const { Content, Sider } = Layout;
 
   return (
@@ -23,7 +23,7 @@ function App() {
         <Route exact path="/">
           <MainPage/>
         </Route>
-        <Route path="/catalog/:name">
+        <Route path="/partner/:name">
           <Layout>
             <Sider style={{height: "100vh"}}> 
               <CatalogTree setView={setView} treeData={treeData} />
