@@ -8,12 +8,14 @@ import MainPage from './MainPage/MainPage';
 import CatalogTree from './components/CatalogTree/CatalogTree';
 import CatigoryesView from './components/CatigoryesView/CatigoryesView';
 import DataSetView from './components/DataSetView/DataSetView';
+import Header from './components/Header/Header'
 import { treeData } from './common/const';
 import GetDatasets from './GetDatasets';
 
 function App() {
-  const [view, setView] = useState(false);
-  const [title, setTitle] = useState();
+  const [view, setView] = useState(true);
+  const [catigory, setCatigory] = useState({title: 'Clients'});
+  const [dataSet, setDataSet] = useState();
 
   const { Content, Sider } = Layout;
 
@@ -26,12 +28,20 @@ function App() {
             <MainPage />
           </Route>
           <Route path='/partner/:name'>
+            <Header/>
             <Layout>
-              <Sider style={{ height: '100vh' }}>
-                <CatalogTree setView={setView} treeData={treeData} />
+              <Sider>
+                <CatalogTree 
+                  setView={setView} 
+                  setCatigory={setCatigory} 
+                  setDataSet={setDataSet} 
+                  treeData={treeData} 
+                />
               </Sider>
               <Layout>
-                <Content>{view ? <CatigoryesView /> : <DataSetView />}</Content>
+                <Content>
+                  {view ? <CatigoryesView catigory={catigory}/> : <DataSetView dataSet={dataSet} />}
+                </Content>
                 <CatalogPage />
               </Layout>
             </Layout>
