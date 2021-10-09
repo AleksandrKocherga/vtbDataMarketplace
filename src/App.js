@@ -15,7 +15,6 @@ function App() {
   const [catigory, setCatigory] = useState({title: 'Clients'});
   const [dataSet, setDataSet] = useState();
 
-
   const { Content, Sider } = Layout;
 
   return (
