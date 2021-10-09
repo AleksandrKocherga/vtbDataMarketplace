@@ -16,7 +16,7 @@ function DataSetView() {
           <TabPane tab="Связи" key="2">
             <div>Список с какими датасетами этот датасет связан</div>
           </TabPane>
-          <TabPane tab="Статистика" key="1">
+          <TabPane tab="Статистика" key="3">
             <div>2 графика</div>
           </TabPane>
         </Tabs>

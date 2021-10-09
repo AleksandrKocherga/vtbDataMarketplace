@@ -1,22 +1,8 @@
 import React from 'react';
-import {Input, Card} from 'antd';
+import { Link } from 'react-router-dom';
+import { Input, Card}  from 'antd';
+import { mockPartner } from '../common/const'
 import styles from './MainPage.module.css';
-
-const mockContr = [{
-    id: 1,
-    name: 'ГК «Донстрой»',
-    img: 'https://www.vtb.ru/-/media/Feature/Companies/donstroy.png'
-}, {
-    id: 2,
-    name: 'Группа Компаний ГАЛС',
-    img: 'https://www.vtb.ru/-/media/Feature/Companies/gals.png'
-},
-    {
-        id: 3,
-        name: 'ПИК',
-        img: 'https://www.vtb.ru/-/media/Feature/Companies/pik-new.png'
-    }]
-
 
 function MainPage() {
 
@@ -30,15 +16,17 @@ function MainPage() {
                 </div>
                 <Input.Search className={styles.input}/>
                 <div className={styles.cardList}>
-                    {mockContr.length && mockContr.map(contr => (
+                    {mockPartner.length && mockPartner.map(contr => (
+                      <Link to={`/partner/${contr.path}`}>
                         <Card key={contr.id} className={styles.cardListItem}
                               cover={
-                                  <img
-                                      alt="example"
-                                      src={contr.img}/>
+                                <img
+                                alt="example"
+                                src={contr.img}/>
                               }
                               hoverable
-                        />))
+                              />
+                        </Link>))
                     }
                 </div>
             </div>

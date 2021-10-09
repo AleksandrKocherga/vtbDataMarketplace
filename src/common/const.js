@@ -1,51 +1,103 @@
-import { CarryOutOutlined, FormOutlined } from '@ant-design/icons';
-
+export const mockPartner = [
+  {
+    id: 1,
+    path: 'Donstroy',
+    name: 'ГК «Донстрой»',
+    img: 'https://www.vtb.ru/-/media/Feature/Companies/donstroy.png'
+  }, {
+    id: 2,
+    path: 'GALS',
+    name: 'Группа Компаний ГАЛС',
+    img: 'https://www.vtb.ru/-/media/Feature/Companies/gals.png'
+  },
+  {
+      id: 3,
+      path: 'PIK',
+      name: 'ПИК',
+      img: 'https://www.vtb.ru/-/media/Feature/Companies/pik-new.png'
+}
+];
+ 
 export const treeData = [
   {
     title: 'Clients',
     key: '0-1',
-    icon: <CarryOutOutlined />,
     children: [
       {
         title: 'DataSet-Clients-1',
         key: '0-1-0',
-        icon: <CarryOutOutlined />,
+  
       },
     ],
   },
   {
     title: 'Items',
     key: '0-2',
-    icon: <CarryOutOutlined />,
     children: [
       {
         title: 'DataSetItems-1',
         key: '0-2-0',
-        icon: <CarryOutOutlined />,
+  
       },
       {
         title: 'DataSetItems-2',
         key: '0-3-0',
-        icon: <CarryOutOutlined />,
+  
       },
     ],
   },
 ];
 
-export const dataSets = [
-  {
-    id: 1,
-    type: 'popular', 
-    title: 'DataSet-Clients-1'
-  }, 
-  {
-    id: 2,
-    type: 'new', 
-    title: 'DataSetItems-1'
-  },
-  {
-    id: 3,
-    type: 'popular', 
-    title: 'DataSetItems-2'
-  }, 
-]
+export const dataSets = { 
+  Donstroy: [
+    {
+      id: 1,
+      type: 'popular', 
+      title: 'DataSet-Clients-Donstroy-1'
+    }, 
+    {
+      id: 2,
+      type: 'new', 
+      title: 'DataSet-Items-Donstroy-1'
+    },
+    {
+      id: 3,
+      type: 'popular', 
+      title: 'DataSet-Items-Donstroy-2'
+    }, 
+  ], 
+  GALS: [
+    {
+      id: 1,
+      type: 'popular', 
+      title: 'DataSet-Clients-GALS-1'
+    }, 
+    {
+      id: 2,
+      type: 'new', 
+      title: 'DataSet-Items-GALS-1'
+    },
+    {
+      id: 3,
+      type: 'popular', 
+      title: 'DataSet-Items-GALS-2'
+    }, 
+  ], 
+  PIK: [
+    {
+      id: 1,
+      type: 'popular', 
+      title: 'DataSet-Clients-PIK-1'
+    }, 
+    {
+      id: 2,
+      type: 'new', 
+      title: 'DataSet-Items-PIK-1'
+    },
+    {
+      id: 3,
+      type: 'popular', 
+      title: 'DataSet-Items-PIK-2'
+    }, 
+  ]
+};
