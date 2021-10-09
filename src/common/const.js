@@ -53,18 +53,27 @@ export const dataSets = {
     {
       id: 1,
       type: 'popular', 
-      title: 'DataSet-Clients-Donstroy-1'
+      title: 'DataSet-Clients-Donstroy-1',
+      price: '499'
     }, 
     {
       id: 2,
       type: 'new', 
-      title: 'DataSet-Items-Donstroy-1'
+      title: 'DataSet-Items-Donstroy-1',
+      price: '499'
     },
     {
       id: 3,
       type: 'popular', 
-      title: 'DataSet-Items-Donstroy-2'
-    }, 
+      title: 'DataSet-Items-Donstroy-2',
+      price: '499'
+    },
+    {
+      id: 4,
+      type: 'isPurchased',
+      title: 'DataSet-Items-Donstroy-2',
+      price: '499'
+    },
   ], 
   GALS: [
     {
