@@ -28,7 +28,7 @@ function App() {
             <MainPage />
           </Route>
           <Route path='/partner/:name'>
-              <Header/>
+            <Header/>
             <Layout>
               <Sider>
                 <CatalogTree 
