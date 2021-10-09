@@ -2,12 +2,12 @@ import React from 'react';
 import { Tabs } from 'antd';
 import {Attributes} from "../Attributes/Attributes";
 
-function DataSetView() {
+function DataSetView({dataSet}) {
   const { TabPane } = Tabs;
 
   return (
     <div>
-      <h1>Title</h1>
+      <h1>{ dataSet.title }</h1>
       <div> Descriptions </div>
       <div>
         <Tabs defaultActiveKey="1" onChange={null}>
