@@ -41,8 +41,44 @@ export const treeData = [
       },
       {
         title: 'DataSetItems-2',
-        key: '0-3-0',
+        key: '0-2-1',
   
+      },
+    ],
+  },
+  {
+    title: 'Vertica',
+    key: '0-3',
+    children: [
+      {
+        title: 'RESOURCE_POOL-1',
+        key: '0-3-0',
+      },
+      {
+        title: 'NI_FI_JOB-2',
+        key: '0-3-1',
+      },
+      {
+        title: 'SAP_ERP_-2',
+        key: '0-3-2',
+      },
+    ],
+  },
+  {
+    title: 'Test_EBAN_SAP',
+    key: '0-4',
+    children: [
+      {
+        title: 'Artify_NO_SIDI-1',
+        key: '0-4-0',
+      },
+      {
+        title: 'NI_FI_JOB_TEST_',
+        key: '0-4-1',
+      },
+      {
+        title: 'ERP_-2',
+        key: '0-4-2',
       },
     ],
   },
@@ -54,6 +90,13 @@ export const dataSets = {
       id: 1,
       type: 'popular', 
       title: 'DataSet-Clients-Donstroy-1',
+      fields: [
+          {name: 'ФИО', quality: '50%',type: 'string'},
+        {name: 'Телефон', quality: '20%', type: 'string'},
+        {name: 'Почта', quality: '10%', type: 'string'},
+        {name: 'Город', quality: '60%', type: 'string'}
+      ],
+      links: [2,4],
       price: '499'
     }, 
     {
@@ -79,12 +122,22 @@ export const dataSets = {
     {
       id: 1,
       type: 'popular', 
-      title: 'DataSet-Clients-GALS-1'
+      title: 'DataSet-Clients-GALS-1',
+      fields: [
+          {name: 'ФИО', quality: '20%', type: 'string'},
+        {name: 'Телефон', quality: '70%', type: 'string'},
+        {name: 'Город', quality: '60%', type: 'string'}
+      ],
     }, 
     {
       id: 2,
       type: 'new', 
-      title: 'DataSet-Items-GALS-1'
+      title: 'DataSet-Items-GALS-1',
+      fields: [
+          {name: 'Название', quality: '40%', type: 'string'},
+        {name: 'Цена', quality: '70%', type: 'string'},
+        {name: 'Габариты', quality: '60%', type: 'string'}
+      ],
     },
     {
       id: 3,
@@ -96,7 +149,11 @@ export const dataSets = {
     {
       id: 1,
       type: 'popular', 
-      title: 'DataSet-Clients-PIK-1'
+      title: 'DataSet-Clients-PIK-1',
+      fields: [
+          {name: 'ФИО', quality: '50%', type: 'string'},
+        {name: 'Телефон', quality: '20%', type: 'string'},
+      ],
     }, 
     {
       id: 2,

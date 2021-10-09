@@ -1,5 +1,6 @@
 import React from 'react';
 import { Tabs } from 'antd';
+import {Attributes} from "../Attributes/Attributes";
 
 function DataSetView() {
   const { TabPane } = Tabs;
@@ -13,10 +14,13 @@ function DataSetView() {
           <TabPane tab="Схема" key="1">
             <div>Название полей и тип данных</div>
           </TabPane>
-          <TabPane tab="Связи" key="2">
+            <TabPane tab="Атрибуты" key="2">
+                <Attributes/>
+            </TabPane>
+          <TabPane tab="Связи" key="3">
             <div>Список с какими датасетами этот датасет связан</div>
           </TabPane>
-          <TabPane tab="Статистика" key="3">
+          <TabPane tab="Статистика" key="4">
             <div>2 графика</div>
           </TabPane>
         </Tabs>
