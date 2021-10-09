@@ -5,7 +5,6 @@ import { Layout } from 'antd'
 
 import CatalogPage from './CatalogPage/CatalogPage';
 import MainPage from './MainPage/MainPage';
-import SinglePage from './SinglePage/SinglePage';
 import CatalogTree from './components/CatalogTree/CatalogTree';
 import CatigoryesView from './components/CatigoryesView/CatigoryesView';
 import DataSetView from './components/DataSetView/DataSetView';
