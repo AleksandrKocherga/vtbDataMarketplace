@@ -1,0 +1,45 @@
+.container {
+    padding: 10px;
+}
+
+.header {
+    height: 150px;
+    padding: 10px 0 25px;
+
+}
+.title {
+    font-size: 24px;
+}
+
+.description {
+    margin-top: 24px;
+}
+
+.tabs {
+
+}
+
+.tab {
+
+}
+
+.cardListItem {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cardListItemTitle {
+    font-weight: 600;
+}
+
+.price {
+}
+.buy {
+    border-radius: 25px;
+    background: #31ec8d;
+    padding: 2px 12px 4px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
