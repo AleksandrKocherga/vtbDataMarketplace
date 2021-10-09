@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Layout } from 'antd'
 
@@ -7,9 +8,13 @@ import MainPage from './MainPage/MainPage';
 import SinglePage from './SinglePage/SinglePage';
 import CatalogTree from './components/CatalogTree/CatalogTree';
 import CatigoryesView from './components/CatigoryesView/CatigoryesView';
+import DataSetView from './components/DataSetView/DataSetView';
 import { treeData } from './common/const';
 
 function App() {
+  const [view, setView] = useState(false);
+  const [title, setTitle] = useState();
+  
   const { Content, Sider } = Layout;
 
   return (
@@ -18,24 +23,15 @@ function App() {
         <Route exact path="/">
           <MainPage/>
         </Route>
-          <Route path="/single">
-            <Layout>
-              <Sider style={{height: "100vh"}}> 
-                <CatalogTree treeData={treeData} />
-              </Sider>
-              <Layout>
-                <Content>Content</Content>
-              <SinglePage/>
-              </Layout>
-            </Layout>
-          </Route>
-        <Route path="/catalog">
+        <Route path="/catalog/:name">
           <Layout>
             <Sider style={{height: "100vh"}}> 
-              <CatalogTree treeData={treeData} />
+              <CatalogTree setView={setView} treeData={treeData} />
             </Sider>
             <Layout>
-              <Content><CatigoryesView/></Content>
+              <Content>
+                {view ? <CatigoryesView/> : <DataSetView/>}
+              </Content>
             <CatalogPage/>
             </Layout>
           </Layout>
