@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tabs, Card, Button, Tooltip, message } from 'antd';
+import { Tabs, Card, Button, Tooltip, message, Statistic } from 'antd';
 import { useParams } from 'react-router-dom';
 import styles from './CatigoryesView.module.css'
 
@@ -10,7 +10,7 @@ function CatigoryesView({ catigory }) {
 
     const { name } = useParams();
 
-    const date = '23/09/2021'
+    const date = {Clients:'23/09/2021', Items: '10/06/2001', Vertica: '13/11/2020'}
 
     const handleClick = () => {
       setTimeout(() => {
@@ -27,10 +27,10 @@ function CatigoryesView({ catigory }) {
                    <Button type="primary" shape="round" onClick={handleClick}>Купить</Button>
                 </Tooltip>
               </div>
-                <div className={styles.description}>
-                  <div>{`В даннай категории хранятся датасеты с данными о клиентах нашей компании`}</div>
-                  <div>{`Всего датасетов ${catigory.children.length} в категории ${catigory.title}`} </div>
-                  <div>{`Дата загрузки последнего датасета ${date}`}</div>
+                <div className={styles.descriptionContainer}>
+                  <Statistic title="Категория:" value={catigory.title}/>
+                  <Statistic title="Всего датасетов:" value={catigory.children.length}/>
+                  <Statistic title="Дата загрузки последнего датасета:" value={date[catigory.title]}/>
                 </div>
             </div>
             <div>
