@@ -162,6 +162,10 @@ export const dataSets = {
       id: 3,
       type: 'popular',
       name: 'DataSet-Items-PIK-2',
+      fields: [
+        { name: 'Высшее образование', quality: '50%', type: 'string' },
+        { name: 'Марка авто', quality: '20%', type: 'string' },
+      ],
     },
   ],
   datahub: [],
