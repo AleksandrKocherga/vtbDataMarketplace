@@ -1,6 +1,6 @@
 import React from 'react';
-import {Tabs, Card} from 'antd';
-import {useParams} from 'react-router-dom';
+import { Tabs, Card, Button, Tooltip, message } from 'antd';
+import { useParams } from 'react-router-dom';
 import styles from './CatigoryesView.module.css'
 
 import {dataSets} from '../../common/const'
@@ -10,11 +10,30 @@ function CatigoryesView({ catigory }) {
 
     const { name } = useParams();
 
+    const date = '23/09/2021'
+
+    const handleClick = () => {
+      setTimeout(() => {
+        message.success('категория куплена')
+      }, 1000)
+    }
+
+    console.log(catigory)
+
     return (
         <div className={styles.container}>
             <div className={styles.header}>
+              <div className={styles.titleContainer}>
                 <h1 className={styles.title}>{ catigory.title }</h1>
-                <div className={styles.description}>Очень подробное описание категории или без него</div>
+                <Tooltip title="Купить все датасеты в данной категории" placement="bottom">
+                   <Button type="primary" shape="round" onClick={handleClick}>Купить</Button>
+                </Tooltip>
+              </div>
+                <div className={styles.description}>
+                  <div>{`В даннай категории хранятся датасеты с данными о клиентах нашей компании`}</div>
+                  <div>{`Всего датасетов ${catigory.children.length} в категории ${catigory.title}`} </div>
+                  <div>{`Дата загрузки последнего датасета ${date}`}</div>
+                </div>
             </div>
             <div>
                 <Tabs defaultActiveKey="1" onChange={null} className={styles.tabs}>

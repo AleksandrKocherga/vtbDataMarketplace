@@ -14,7 +14,7 @@ import GetDatasets from './GetDatasets';
 
 function App() {
   const [view, setView] = useState(true);
-  const [catigory, setCatigory] = useState({title: 'Clients'});
+  const [catigory, setCatigory] = useState({title: 'Clients', children: [1]});
   const [dataSet, setDataSet] = useState();
 
   const { Content, Sider } = Layout;
