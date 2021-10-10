@@ -26,6 +26,7 @@ export const treeData = [
     children: [
       {
         title: 'DataSet-Clients-1',
+        name: 'DataSet-Clients-Donstroy-1',
         key: '0-1-0',
       },
     ],

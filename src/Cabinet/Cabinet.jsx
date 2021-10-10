@@ -6,7 +6,12 @@ import './style.scss';
 
 const Cabinet = () => {
   const [datasetsList, setDatasetsList] = useState([]);
+  console.log(
+    '🚀 ~ file: Cabinet.jsx ~ line 9 ~ Cabinet ~ datasetsList',
+    datasetsList
+  );
   const user = useSelector((state) => state.user);
+  console.log('🚀 ~ file: Cabinet.jsx ~ line 11 ~ Cabinet ~ user', user);
   const datasets = useSelector((state) => state.datasets);
   console.log('🚀 ~ file: Cabinet.jsx ~ line 9 ~ Cabinet ~ datasets', datasets);
 
@@ -17,7 +22,7 @@ const Cabinet = () => {
 
     console.log('🚀 ~ file: Cabinet.jsx ~ line 11 ~ Cabinet ~ goods', goods);
     setDatasetsList(goods);
-  }, [datasets, user?.userDatasets]);
+  }, [datasets, user?.userDatasets?.length]);
 
   const activate = (name) => {
     setDatasetsList((state) =>
