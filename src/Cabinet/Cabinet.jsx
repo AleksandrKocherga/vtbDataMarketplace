@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import cn from 'classnames';
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ava from './avatar.jpeg';
 import './style.scss';
@@ -62,6 +63,7 @@ const Cabinet = () => {
 
   return (
     <div className='cabinet-wrapper'>
+      <Link to='/partner/Donstroy'>Назад в каталог</Link>
       <div className='cabinet'>
         <div className='cabinet-header'>
           <div className='avatar'>

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Button, Divider, Space, Tabs, Tag } from 'antd';
+import { Button, Space, Tabs, Tag } from 'antd';
 import Avatar from 'antd/es/avatar/avatar';
 import { DollarCircleOutlined } from '@ant-design/icons';
-import { Line } from 'react-chartjs-2';
 import { Doughnut } from 'react-chartjs-2';
+import { useDispatch } from 'react-redux';
+import { addDatasetToUser } from '../../redux/actions';
 import styles from './DataSetView.module.css';
 
 const options = {
@@ -35,6 +36,7 @@ const data2 = {
 };
 
 function DataSetView({ dataSet }) {
+  const dispatch = useDispatch();
   const { TabPane } = Tabs;
   const [loadingBtn, setLoadingBtn] = useState(false);
   const [btnBuy, setBtnBuy] = useState(false);
@@ -46,6 +48,11 @@ function DataSetView({ dataSet }) {
       setBtnBuy(true);
       setTags((prev) => [...prev, 'куплено']);
       setColors((prev) => [...prev, 'green']);
+      dispatch(addDatasetToUser(dataSet.name));
+      console.log(
+        '🚀 ~ file: DataSetView.js ~ line 53 ~ setTimeout ~ dataSet',
+        dataSet
+      );
     }, 4000);
   };
 
@@ -53,34 +60,42 @@ function DataSetView({ dataSet }) {
     <div className={styles.container}>
       <div className={styles.header}>
         <h1 className={styles.title}>{dataSet.title}</h1>
+
         <div className={styles.description}>
           <div className={styles.descriptionText}>
-            Описание если есть, автор может добавть
-            <div>
-              <strong>Автор</strong>: {dataSet.author || 'Аноним'}
+            <div className={styles.descriptionAvatar}>
+              <Avatar
+                size={80}
+                src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
+              />
+              <div style={{ marginTop: '20px' }}>
+                <div>
+                  <strong>Владелец:</strong> Семен Игоревич
+                </div>
+                <div>
+                  <strong>Автор</strong>: {dataSet.author || 'Аноним'}
+                </div>
+              </div>
             </div>
-            499 RUB
-            <Space style={{ width: '100%' }}>
+            Описание если есть, автор может добавть
+            <div></div>
+            <Space
+              style={{ width: '100%', marginTop: '30px' }}
+              className={styles.space}
+            >
+              <span className={styles.price}>499 RUB</span>
               {btnBuy ? null : (
                 <Button
                   type='green'
                   loading={loadingBtn}
                   icon={<DollarCircleOutlined />}
                   onClick={handlerBtnBuy}
+                  className={styles.btnBuy}
                 >
                   Купить
                 </Button>
               )}
             </Space>
-            <div>
-              Владелец
-              <Avatar
-                size={64}
-                src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
-              />
-              Семен Игоревич
-            </div>
-            <Divider orientation='left'>Теги</Divider>
             <div>
               {tags.map((tag, i) => (
                 <Tag key={tag} color={[colors[i]]}>
