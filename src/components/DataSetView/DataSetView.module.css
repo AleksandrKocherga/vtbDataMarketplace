@@ -55,7 +55,7 @@
     width: 150px;
     text-align: center;
     position: relative;
-;
+
 }
 .chart div {
     margin-bottom: 10px;
@@ -78,19 +78,20 @@
     display: flex;
 }
 .btnBuy{
-    border-radius: 25px;
-    background: #31ec8d;
-    padding: 2px 12px 4px;
-    color: #fff;
-    font-weight: 600;
-    letter-spacing: 1.2px;
+    border-radius: 25px!important;
+    background: #31ec8d!important;
+    padding: 2px 12px 4px!important;
+    color: #fff!important;
+    font-weight: 600!important;
+    letter-spacing: 1.2px!important;
 }
 .price {
     font-size: 20px;
     font-weight: 600;
 }
 .space {
-    display: flex;
+    display: flex!important;
+    justify-content: flex-end;
 }
 .descriptionAvatar {
     display: flex;
