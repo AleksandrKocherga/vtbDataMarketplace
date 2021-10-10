@@ -23,7 +23,8 @@ const CatalogTree = ({treeData, setView, setCatigory, setDataSet}) => {
         onSelect={onSelect}
         defaultSelectedKeys={['0-1']}
         style={{height: '100%'}}
-        />
+        defaultExpandAll
+      />
     </div>
   );
 };
