@@ -11,8 +11,13 @@
     font-size: 24px;
 }
 
+.descriptionContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
 .description {
-    margin-top: 24px;
+  margin: 10px;
 }
 
 .tabs {
