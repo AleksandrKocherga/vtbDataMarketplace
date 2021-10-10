@@ -32,6 +32,34 @@ const Cabinet = () => {
     );
   };
 
+  const combine = () => {
+    const selectedDatasets = datasetsList.filter((el) => el.active);
+    console.log(
+      '🚀 ~ file: Cabinet.jsx ~ line 37 ~ combine ~ selectedDatasets',
+      selectedDatasets
+    );
+    const newDataset = {
+      name: `new___${selectedDatasets.map((el) => el.name).join('___')}`,
+      type: 'userCreated',
+      fields: selectedDatasets
+        .map((el) => el.fields)
+        .flat()
+        .reduce((acc, curr) => [...acc, curr], []),
+    };
+    console.log(
+      '🚀 ~ file: Cabinet.jsx ~ line 41 ~ combine ~ newDataset',
+      newDataset
+    );
+
+    setDatasetsList((state) =>
+      [...state, newDataset].map((el) => {
+        const elCopy = { ...el };
+        elCopy.active = false;
+        return elCopy;
+      })
+    );
+  };
+
   return (
     <div className='cabinet-wrapper'>
       <div className='cabinet'>
@@ -53,9 +81,9 @@ const Cabinet = () => {
         <div className='goods'>
           <h3>Датасеты доступные вам:</h3>
           <ul>
-            {datasetsList.map(({ name, fields, active }) => (
+            {datasetsList.map(({ name, fields, active }, i) => (
               <li
-                key={name}
+                key={name + '_' + i}
                 onClick={() => activate(name)}
                 className={cn({ 'active-li': active })}
               >
@@ -63,8 +91,8 @@ const Cabinet = () => {
                 {!!fields?.length && (
                   <div className='fields'>
                     Поля:
-                    {fields?.map((field) => (
-                      <p key={field?.name}>{field?.name}</p>
+                    {fields?.map((field, i) => (
+                      <p key={field?.name + '_' + i}>{field?.name}</p>
                     ))}
                   </div>
                 )}
@@ -72,6 +100,10 @@ const Cabinet = () => {
             ))}
           </ul>
         </div>
+
+        {datasetsList?.filter((el) => el.active).length > 1 && (
+          <button onClick={combine}>Объединить датасеты</button>
+        )}
       </div>
     </div>
   );
