@@ -14,6 +14,7 @@ const userReducer = createReducer(initUser, {
   [addUser]: (state, { payload }) => payload,
   [addDatasetToUser]: (state, { payload }) => ({
     ...state,
+    balance: state.balance - 499,
     userDatasets: [...state.userDatasets, payload],
   }),
 });
