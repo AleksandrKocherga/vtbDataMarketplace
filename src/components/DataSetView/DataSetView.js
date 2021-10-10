@@ -1,28 +1,53 @@
 import React, {useState} from 'react';
 import {Button, Divider, Space, Tabs, Tag} from 'antd';
 import Avatar from "antd/es/avatar/avatar";
+import {DollarCircleOutlined} from "@ant-design/icons";
+import { Line } from 'react-chartjs-2';
 
-function DollarOutlined() {
-    return null;
-}
+const data = {
+    labels: ['1', '2', '3', '4', '5', '6'],
+    datasets: [
+        {
+            label: 'Количество скачиваний',
+            data: [12, 19, 3, 5, 2, 3],
+            fill: false,
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgba(255, 99, 132, 0.2)',
+        },
+    ],
+};
 
-function PoweroffOutlined() {
-    return null;
-}
+const options = {
+    scales: {
+        yAxes: [
+            {
+                ticks: {
+                    beginAtZero: true,
+                },
+            },
+        ],
+    },
+};
 
-function UserOutlined() {
-    return null;
-}
-
+const LineChart = () => (
+    <>
+        <Line data={data} options={options} />
+    </>
+);
 function DataSetView({dataSet}) {
     const {TabPane} = Tabs;
+    const [loadingBtn, setLoadingBtn] = useState(false);
     const [btnBuy, setBtnBuy] = useState(false);
     const [tags, setTags] = useState(['продажи','sales','SAP', 'отдел продаж'])
     const [colors, setColors] = useState(['magenta','volcano','cyan', 'blue'])
     const handlerBtnBuy = () => {
-        setBtnBuy(true);
-        setTags(prev => [...prev, 'куплено']);
-        setColors(prev => [...prev, 'green'])
+        setLoadingBtn(true);
+        setTimeout(()=>{
+            setBtnBuy(true);
+            setTags(prev => [...prev, 'куплено']);
+            setColors(prev => [...prev, 'green'])
+        },4000)
+
     };
 
     return (
@@ -33,7 +58,8 @@ function DataSetView({dataSet}) {
             <Space style={{width: '100%'}}>
                 {btnBuy ? null : <Button
                     type="green"
-                    icon={<PoweroffOutlined/>}
+                    loading={loadingBtn}
+                    icon={<DollarCircleOutlined />}
                     onClick={handlerBtnBuy}>
                     Купить
                 </Button>}
@@ -47,6 +73,9 @@ function DataSetView({dataSet}) {
             <Divider orientation="left">Теги</Divider>
             <div>
                 {tags.map((tag,i) => <Tag key={tag} color={[colors[i]]}>{tag}</Tag>)}
+            </div>
+            <div>
+               <LineChart/>
             </div>
             <div>
                 <Tabs defaultActiveKey="1" onChange={null}>
