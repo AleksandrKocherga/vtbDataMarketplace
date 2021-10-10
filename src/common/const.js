@@ -165,5 +165,583 @@ export const dataSets = {
       type: 'popular', 
       title: 'DataSet-Items-PIK-2'
     }, 
-  ]
+  ],
+  datahub: []
 };
+
+const emergencyMock = {
+  datasets: {
+    Donstroy: [
+      {
+        id: 1,
+        type: 'popular',
+        title: 'DataSet-Clients-Donstroy-1',
+        fields: [
+          {
+            name: 'ФИО',
+            quality: '50%',
+            type: 'string'
+          },
+          {
+            name: 'Телефон',
+            quality: '20%',
+            type: 'string'
+          },
+          {
+            name: 'Почта',
+            quality: '10%',
+            type: 'string'
+          },
+          {
+            name: 'Город',
+            quality: '60%',
+            type: 'string'
+          }
+        ],
+        links: [
+          2,
+          4
+        ],
+        price: '499'
+      },
+      {
+        id: 2,
+        type: 'new',
+        title: 'DataSet-Items-Donstroy-1',
+        price: '499'
+      },
+      {
+        id: 3,
+        type: 'popular',
+        title: 'DataSet-Items-Donstroy-2',
+        price: '499'
+      },
+      {
+        id: 4,
+        type: 'isPurchased',
+        title: 'DataSet-Items-Donstroy-2',
+        price: '499'
+      }
+    ],
+    GALS: [
+      {
+        id: 1,
+        type: 'popular',
+        title: 'DataSet-Clients-GALS-1',
+        fields: [
+          {
+            name: 'ФИО',
+            quality: '20%',
+            type: 'string'
+          },
+          {
+            name: 'Телефон',
+            quality: '70%',
+            type: 'string'
+          },
+          {
+            name: 'Город',
+            quality: '60%',
+            type: 'string'
+          }
+        ]
+      },
+      {
+        id: 2,
+        type: 'new',
+        title: 'DataSet-Items-GALS-1',
+        fields: [
+          {
+            name: 'Название',
+            quality: '40%',
+            type: 'string'
+          },
+          {
+            name: 'Цена',
+            quality: '70%',
+            type: 'string'
+          },
+          {
+            name: 'Габариты',
+            quality: '60%',
+            type: 'string'
+          }
+        ]
+      },
+      {
+        id: 3,
+        type: 'popular',
+        title: 'DataSet-Items-GALS-2'
+      }
+    ],
+    PIK: [
+      {
+        id: 1,
+        type: 'popular',
+        title: 'DataSet-Clients-PIK-1',
+        fields: [
+          {
+            name: 'ФИО',
+            quality: '50%',
+            type: 'string'
+          },
+          {
+            name: 'Телефон',
+            quality: '20%',
+            type: 'string'
+          }
+        ]
+      },
+      {
+        id: 2,
+        type: 'new',
+        title: 'DataSet-Items-PIK-1'
+      },
+      {
+        id: 3,
+        type: 'popular',
+        title: 'DataSet-Items-PIK-2'
+      }
+    ],
+    datahub: [
+      {
+        __typename: 'Dataset',
+        name: 'SampleHdfsDataset',
+        status: null,
+        tags: {
+          __typename: 'GlobalTags',
+          tags: []
+        },
+        description: null,
+        schema: {
+          __typename: 'Schema',
+          name: 'SampleHdfsSchema',
+          fields: [
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'shipment_info'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'shipment_info.date'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'shipment_info.target'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'shipment_info.destination'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'shipment_info.geo_info'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'shipment_info.geo_info.lat'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'shipment_info.geo_info.lng'
+            }
+          ]
+        }
+      },
+      {
+        __typename: 'Dataset',
+        name: 'SampleHdfsDataset',
+        status: null,
+        tags: {
+          __typename: 'GlobalTags',
+          tags: []
+        },
+        description: null,
+        schema: {
+          __typename: 'Schema',
+          name: 'SampleHdfsSchema',
+          fields: [
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'shipment_info'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'shipment_info.date'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'shipment_info.target'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'shipment_info.destination'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'shipment_info.geo_info'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'shipment_info.geo_info.lat'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'shipment_info.geo_info.lng'
+            }
+          ]
+        }
+      },
+      {
+        __typename: 'Dataset',
+        name: 'SampleHiveDataset',
+        status: null,
+        tags: {
+          __typename: 'GlobalTags',
+          tags: [
+            {
+              __typename: 'TagAssociation',
+              tag: {
+                __typename: 'Tag',
+                name: 'Legacy'
+              }
+            },
+            {
+              __typename: 'TagAssociation',
+              tag: {
+                __typename: 'Tag',
+                name: 'lefa'
+              }
+            },
+            {
+              __typename: 'TagAssociation',
+              tag: {
+                __typename: 'Tag',
+                name: 'blabla'
+              }
+            }
+          ]
+        },
+        description: null,
+        schema: {
+          __typename: 'Schema',
+          name: 'SampleHiveSchema',
+          fields: [
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'field_foo'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'field_bar'
+            }
+          ]
+        }
+      },
+      {
+        __typename: 'Dataset',
+        name: 'SampleHiveDataset',
+        status: null,
+        tags: {
+          __typename: 'GlobalTags',
+          tags: [
+            {
+              __typename: 'TagAssociation',
+              tag: {
+                __typename: 'Tag',
+                name: 'Legacy'
+              }
+            },
+            {
+              __typename: 'TagAssociation',
+              tag: {
+                __typename: 'Tag',
+                name: 'lefa'
+              }
+            },
+            {
+              __typename: 'TagAssociation',
+              tag: {
+                __typename: 'Tag',
+                name: 'blabla'
+              }
+            }
+          ]
+        },
+        description: null,
+        schema: {
+          __typename: 'Schema',
+          name: 'SampleHiveSchema',
+          fields: [
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'field_foo'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'field_bar'
+            }
+          ]
+        }
+      },
+      {
+        __typename: 'Dataset',
+        name: 'fct_users_created',
+        status: null,
+        tags: {
+          __typename: 'GlobalTags',
+          tags: []
+        },
+        description: null,
+        schema: {
+          __typename: 'Schema',
+          name: 'SampleHiveSchema',
+          fields: [
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'user_id'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'user_name'
+            }
+          ]
+        }
+      },
+      {
+        __typename: 'Dataset',
+        name: 'fct_users_created',
+        status: null,
+        tags: {
+          __typename: 'GlobalTags',
+          tags: []
+        },
+        description: null,
+        schema: {
+          __typename: 'Schema',
+          name: 'SampleHiveSchema',
+          fields: [
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'user_id'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'user_name'
+            }
+          ]
+        }
+      },
+      {
+        __typename: 'Dataset',
+        name: 'fct_users_deleted',
+        status: null,
+        tags: {
+          __typename: 'GlobalTags',
+          tags: [
+            {
+              __typename: 'TagAssociation',
+              tag: {
+                __typename: 'Tag',
+                name: 'test'
+              }
+            }
+          ]
+        },
+        description: null,
+        schema: {
+          __typename: 'Schema',
+          name: 'SampleHiveSchema',
+          fields: [
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'user_name'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'timestamp'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'user_id'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'browser_id'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'session_id'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'deletion_reason'
+            }
+          ]
+        }
+      },
+      {
+        __typename: 'Dataset',
+        name: 'fct_users_deleted',
+        status: null,
+        tags: {
+          __typename: 'GlobalTags',
+          tags: [
+            {
+              __typename: 'TagAssociation',
+              tag: {
+                __typename: 'Tag',
+                name: 'test'
+              }
+            }
+          ]
+        },
+        description: null,
+        schema: {
+          __typename: 'Schema',
+          name: 'SampleHiveSchema',
+          fields: [
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'user_name'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'timestamp'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'user_id'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'browser_id'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'session_id'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'deletion_reason'
+            }
+          ]
+        }
+      },
+      {
+        __typename: 'Dataset',
+        name: 'logging_events',
+        status: null,
+        tags: null,
+        description: null,
+        schema: {
+          __typename: 'Schema',
+          name: 'SampleHiveSchema',
+          fields: [
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'event_name'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'event_data'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'timestamp'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'browser'
+            }
+          ]
+        }
+      },
+      {
+        __typename: 'Dataset',
+        name: 'logging_events',
+        status: null,
+        tags: null,
+        description: null,
+        schema: {
+          __typename: 'Schema',
+          name: 'SampleHiveSchema',
+          fields: [
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'event_name'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'event_data'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'timestamp'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: 'browser'
+            }
+          ]
+        }
+      },
+      {
+        __typename: 'Dataset',
+        name: 'SampleKafkaDataset',
+        status: null,
+        tags: {
+          __typename: 'GlobalTags',
+          tags: []
+        },
+        description: null,
+        schema: {
+          __typename: 'Schema',
+          name: 'SampleKafkaSchema',
+          fields: [
+            {
+              __typename: 'SchemaField',
+              fieldPath: '[version=2.0].[type=boolean].field_foo_2'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: '[version=2.0].[type=boolean].field_bar'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: '[version=2.0].[key=True].[type=int].id'
+            }
+          ]
+        }
+      },
+      {
+        __typename: 'Dataset',
+        name: 'SampleKafkaDataset',
+        status: null,
+        tags: {
+          __typename: 'GlobalTags',
+          tags: []
+        },
+        description: null,
+        schema: {
+          __typename: 'Schema',
+          name: 'SampleKafkaSchema',
+          fields: [
+            {
+              __typename: 'SchemaField',
+              fieldPath: '[version=2.0].[type=boolean].field_foo_2'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: '[version=2.0].[type=boolean].field_bar'
+            },
+            {
+              __typename: 'SchemaField',
+              fieldPath: '[version=2.0].[key=True].[type=int].id'
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
