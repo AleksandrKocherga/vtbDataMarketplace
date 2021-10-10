@@ -1,0 +1,80 @@
+.container {
+    padding: 10px;
+}
+
+.header {
+    height: 250px;
+    padding: 10px 0 25px;
+
+}
+
+.title {
+    font-size: 24px;
+}
+
+.description {
+    margin-top: 24px;
+    display: flex;
+}
+
+.descriptionText {
+    flex: 0.9;
+
+}
+
+.tabs {
+
+}
+
+.tab {
+
+}
+
+.cardListItem {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cardListItemTitle {
+    font-weight: 600;
+}
+
+.price {
+}
+
+.buy {
+    border-radius: 25px;
+    background: #31ec8d;
+    padding: 2px 12px 4px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+.chart {
+    width: 150px;
+    text-align: center;
+    position: relative;
+;
+}
+.chart div {
+    margin-bottom: 10px;
+    display: block;
+    font-weight: 700;
+}
+.chart span {
+    font-size: 30px;
+    position: absolute;
+    top: 80%;
+    font-weight: 700;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.charts {
+    width: 200px;
+    height: 100px;
+    display: flex;
+}
