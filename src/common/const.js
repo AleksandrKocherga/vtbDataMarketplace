@@ -27,6 +27,7 @@ export const treeData = [
       {
         title: 'DataSet-Clients-1',
         key: '0-1-0',
+        name: 'DataSet-Clients-Donstroy-1',
       },
     ],
   },
