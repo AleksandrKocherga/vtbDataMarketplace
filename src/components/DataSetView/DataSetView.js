@@ -4,6 +4,8 @@ import Avatar from 'antd/es/avatar/avatar';
 import { DollarCircleOutlined } from '@ant-design/icons';
 import { Line } from 'react-chartjs-2';
 import { Doughnut } from 'react-chartjs-2';
+import { useDispatch } from 'react-redux';
+import { addDatasetToUser } from '../../redux/actions';
 import styles from './DataSetView.module.css';
 
 const options = {
@@ -35,6 +37,7 @@ const data2 = {
 };
 
 function DataSetView({ dataSet }) {
+  const dispatch = useDispatch();
   const { TabPane } = Tabs;
   const [loadingBtn, setLoadingBtn] = useState(false);
   const [btnBuy, setBtnBuy] = useState(false);
@@ -46,6 +49,7 @@ function DataSetView({ dataSet }) {
       setBtnBuy(true);
       setTags((prev) => [...prev, 'куплено']);
       setColors((prev) => [...prev, 'green']);
+      dispatch(addDatasetToUser(dataSet.name));
     }, 4000);
   };
 

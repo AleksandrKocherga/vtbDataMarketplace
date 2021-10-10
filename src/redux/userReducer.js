@@ -1,5 +1,5 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { addUser } from './actions';
+import { addUser, addDatasetToUser } from './actions';
 
 const initUser = {
   name: 'Анна',
@@ -10,8 +10,12 @@ const initUser = {
   userDatasets: ['DataSet-Clients-GALS-1', 'DataSet-Items-PIK-2'],
 };
 
-const charactersReducer = createReducer(initUser, {
+const userReducer = createReducer(initUser, {
   [addUser]: (state, { payload }) => payload,
+  [addDatasetToUser]: (state, { payload }) => ({
+    ...state,
+    userDatasets: [...state.userDatasets, payload],
+  }),
 });
 
-export default charactersReducer;
+export default userReducer;

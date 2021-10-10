@@ -15,7 +15,7 @@ import Cabinet from './Cabinet';
 
 function App() {
   const [view, setView] = useState(true);
-  const [catigory, setCatigory] = useState({title: 'Clients', children: [1]});
+  const [catigory, setCatigory] = useState({ title: 'Clients', children: [1] });
   const [dataSet, setDataSet] = useState();
 
   const { Content, Sider } = Layout;
@@ -50,7 +50,6 @@ function App() {
                     <DataSetView dataSet={dataSet} />
                   )}
                 </Content>
-                <CatalogPage />
               </Layout>
             </Layout>
           </Route>
