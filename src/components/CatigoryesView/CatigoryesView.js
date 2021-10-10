@@ -18,8 +18,6 @@ function CatigoryesView({ catigory }) {
       }, 1000)
     }
 
-    console.log(catigory)
-
     return (
         <div className={styles.container}>
             <div className={styles.header}>
@@ -41,7 +39,7 @@ function CatigoryesView({ catigory }) {
                         {dataSets[name].length && dataSets[name].map(el => (
                             <Card key={el.id} hoverable>
                                 <div className={styles.cardListItem}>
-                                    <div className={styles.cardListItemTitle}>{el.title}</div>
+                                    <div className={styles.cardListItemTitle}>{el.name}</div>
                                     <div className={styles.price}>{el.price}</div>
                                 </div>
 
@@ -51,7 +49,7 @@ function CatigoryesView({ catigory }) {
                         {dataSets[name].length && dataSets[name].map(el => el.type === 'new' ? (
                             <Card key={el.id} hoverable>
                                 <div className={styles.cardListItem}>
-                                    <div className={styles.cardListItemTitle}>{el.title}</div>
+                                    <div className={styles.cardListItemTitle}>{el.name}</div>
                                     <div className={styles.price}>{el.price}</div>
                                 </div>
                             </Card>) : null)}
@@ -60,7 +58,7 @@ function CatigoryesView({ catigory }) {
                         {dataSets[name].length && dataSets[name].map(el => el.type === 'popular' ? (
                             <Card key={el.id} hoverable>
                                 <div className={styles.cardListItem}>
-                                    <div className={styles.cardListItemTitle}>{el.title}</div>
+                                    <div className={styles.cardListItemTitle}>{el.name}</div>
                                     <div className={styles.price}>{el.price}</div>
                                 </div>
                             </Card>) : null)}
@@ -69,7 +67,7 @@ function CatigoryesView({ catigory }) {
                         {dataSets[name].length && dataSets[name].map(el => el.type === 'isPurchased' ? (
                             <Card key={el.id} hoverable>
                                 <div className={styles.cardListItem}>
-                                    <div className={styles.cardListItemTitle}>{el.title}</div>
+                                    <div className={styles.cardListItemTitle}>{el.name}</div>
                                     <div className={styles.buy}>Куплено</div>
                                 </div>
                             </Card>) : null)}
