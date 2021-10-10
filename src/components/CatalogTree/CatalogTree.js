@@ -15,13 +15,14 @@ const CatalogTree = ({treeData, setView, setCatigory, setDataSet}) => {
   };
 
   return (
-    <div>
+    <div className='catalog-tree'>
       <Tree
         showLine={true}
         showIcon={true}
         treeData={treeData}
         onSelect={onSelect}
         defaultSelectedKeys={['0-1']}
+        style={{height: '100%'}}
         />
     </div>
   );
