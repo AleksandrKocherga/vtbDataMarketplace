@@ -63,7 +63,9 @@ const Cabinet = () => {
 
   return (
     <div className='cabinet-wrapper'>
-      <Link to='/partner/Donstroy'>Назад в каталог</Link>
+      <Link to='/' style={{ background: '#000', padding: '2px 4px' }}>
+        Наглавную
+      </Link>
       <div className='cabinet'>
         <div className='cabinet-header'>
           <div className='avatar'>
