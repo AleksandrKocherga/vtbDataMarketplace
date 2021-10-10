@@ -35,6 +35,13 @@
 
 .price {
 }
+
+.titleContainer {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+
 .buy {
     border-radius: 25px;
     background: #31ec8d;
