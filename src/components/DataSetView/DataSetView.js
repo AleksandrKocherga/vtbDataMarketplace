@@ -50,6 +50,10 @@ function DataSetView({ dataSet }) {
       setTags((prev) => [...prev, 'куплено']);
       setColors((prev) => [...prev, 'green']);
       dispatch(addDatasetToUser(dataSet.name));
+      console.log(
+        '🚀 ~ file: DataSetView.js ~ line 53 ~ setTimeout ~ dataSet',
+        dataSet
+      );
     }, 4000);
   };
 
