@@ -3,21 +3,22 @@ export const mockPartner = [
     id: 1,
     path: 'Donstroy',
     name: 'ГК «Донстрой»',
-    img: 'https://www.vtb.ru/-/media/Feature/Companies/donstroy.png'
-  }, {
+    img: 'https://www.vtb.ru/-/media/Feature/Companies/donstroy.png',
+  },
+  {
     id: 2,
     path: 'GALS',
     name: 'Группа Компаний ГАЛС',
-    img: 'https://www.vtb.ru/-/media/Feature/Companies/gals.png'
+    img: 'https://www.vtb.ru/-/media/Feature/Companies/gals.png',
   },
   {
-      id: 3,
-      path: 'PIK',
-      name: 'ПИК',
-      img: 'https://www.vtb.ru/-/media/Feature/Companies/pik-new.png'
-}
+    id: 3,
+    path: 'PIK',
+    name: 'ПИК',
+    img: 'https://www.vtb.ru/-/media/Feature/Companies/pik-new.png',
+  },
 ];
- 
+
 export const treeData = [
   {
     title: 'Clients',
@@ -26,7 +27,6 @@ export const treeData = [
       {
         title: 'DataSet-Clients-1',
         key: '0-1-0',
-  
       },
     ],
   },
@@ -37,12 +37,10 @@ export const treeData = [
       {
         title: 'DataSetItems-1',
         key: '0-2-0',
-  
       },
       {
         title: 'DataSetItems-2',
         key: '0-2-1',
-  
       },
     ],
   },
@@ -84,89 +82,89 @@ export const treeData = [
   },
 ];
 
-export const dataSets = { 
+export const dataSets = {
   Donstroy: [
     {
       id: 1,
-      type: 'popular', 
-      title: 'DataSet-Clients-Donstroy-1',
+      type: 'popular',
+      name: 'DataSet-Clients-Donstroy-1',
       fields: [
-          {name: 'ФИО', quality: '50%',type: 'string'},
-        {name: 'Телефон', quality: '20%', type: 'string'},
-        {name: 'Почта', quality: '10%', type: 'string'},
-        {name: 'Город', quality: '60%', type: 'string'}
+        { name: 'ФИО', quality: '50%', type: 'string' },
+        { name: 'Телефон', quality: '20%', type: 'string' },
+        { name: 'Почта', quality: '10%', type: 'string' },
+        { name: 'Город', quality: '60%', type: 'string' },
       ],
-      links: [2,4],
-      price: '499'
-    }, 
+      links: [2, 4],
+      price: '499',
+    },
     {
       id: 2,
-      type: 'new', 
-      title: 'DataSet-Items-Donstroy-1',
-      price: '499'
+      type: 'new',
+      name: 'DataSet-Items-Donstroy-1',
+      price: '499',
     },
     {
       id: 3,
-      type: 'popular', 
-      title: 'DataSet-Items-Donstroy-2',
-      price: '499'
+      type: 'popular',
+      name: 'DataSet-Items-Donstroy-2',
+      price: '499',
     },
     {
       id: 4,
       type: 'isPurchased',
-      title: 'DataSet-Items-Donstroy-2',
-      price: '499'
+      name: 'DataSet-Items-Donstroy-2',
+      price: '499',
     },
-  ], 
+  ],
   GALS: [
     {
       id: 1,
-      type: 'popular', 
-      title: 'DataSet-Clients-GALS-1',
+      type: 'popular',
+      name: 'DataSet-Clients-GALS-1',
       fields: [
-          {name: 'ФИО', quality: '20%', type: 'string'},
-        {name: 'Телефон', quality: '70%', type: 'string'},
-        {name: 'Город', quality: '60%', type: 'string'}
+        { name: 'ФИО', quality: '20%', type: 'string' },
+        { name: 'Телефон', quality: '70%', type: 'string' },
+        { name: 'Город', quality: '60%', type: 'string' },
       ],
-    }, 
+    },
     {
       id: 2,
-      type: 'new', 
-      title: 'DataSet-Items-GALS-1',
+      type: 'new',
+      name: 'DataSet-Items-GALS-1',
       fields: [
-          {name: 'Название', quality: '40%', type: 'string'},
-        {name: 'Цена', quality: '70%', type: 'string'},
-        {name: 'Габариты', quality: '60%', type: 'string'}
+        { name: 'Название', quality: '40%', type: 'string' },
+        { name: 'Цена', quality: '70%', type: 'string' },
+        { name: 'Габариты', quality: '60%', type: 'string' },
       ],
     },
     {
       id: 3,
-      type: 'popular', 
-      title: 'DataSet-Items-GALS-2'
-    }, 
-  ], 
+      type: 'popular',
+      name: 'DataSet-Items-GALS-2',
+    },
+  ],
   PIK: [
     {
       id: 1,
-      type: 'popular', 
-      title: 'DataSet-Clients-PIK-1',
+      type: 'popular',
+      name: 'DataSet-Clients-PIK-1',
       fields: [
-          {name: 'ФИО', quality: '50%', type: 'string'},
-        {name: 'Телефон', quality: '20%', type: 'string'},
+        { name: 'ФИО', quality: '50%', type: 'string' },
+        { name: 'Телефон', quality: '20%', type: 'string' },
       ],
-    }, 
+    },
     {
       id: 2,
-      type: 'new', 
-      title: 'DataSet-Items-PIK-1'
+      type: 'new',
+      name: 'DataSet-Items-PIK-1',
     },
     {
       id: 3,
-      type: 'popular', 
-      title: 'DataSet-Items-PIK-2'
-    }, 
+      type: 'popular',
+      name: 'DataSet-Items-PIK-2',
+    },
   ],
-  datahub: []
+  datahub: [],
 };
 
 const emergencyMock = {
@@ -175,133 +173,130 @@ const emergencyMock = {
       {
         id: 1,
         type: 'popular',
-        title: 'DataSet-Clients-Donstroy-1',
+        name: 'DataSet-Clients-Donstroy-1',
         fields: [
           {
             name: 'ФИО',
             quality: '50%',
-            type: 'string'
+            type: 'string',
           },
           {
             name: 'Телефон',
             quality: '20%',
-            type: 'string'
+            type: 'string',
           },
           {
             name: 'Почта',
             quality: '10%',
-            type: 'string'
+            type: 'string',
           },
           {
             name: 'Город',
             quality: '60%',
-            type: 'string'
-          }
+            type: 'string',
+          },
         ],
-        links: [
-          2,
-          4
-        ],
-        price: '499'
+        links: [2, 4],
+        price: '499',
       },
       {
         id: 2,
         type: 'new',
-        title: 'DataSet-Items-Donstroy-1',
-        price: '499'
+        name: 'DataSet-Items-Donstroy-1',
+        price: '499',
       },
       {
         id: 3,
         type: 'popular',
-        title: 'DataSet-Items-Donstroy-2',
-        price: '499'
+        name: 'DataSet-Items-Donstroy-2',
+        price: '499',
       },
       {
         id: 4,
         type: 'isPurchased',
-        title: 'DataSet-Items-Donstroy-2',
-        price: '499'
-      }
+        name: 'DataSet-Items-Donstroy-2',
+        price: '499',
+      },
     ],
     GALS: [
       {
         id: 1,
         type: 'popular',
-        title: 'DataSet-Clients-GALS-1',
+        name: 'DataSet-Clients-GALS-1',
         fields: [
           {
             name: 'ФИО',
             quality: '20%',
-            type: 'string'
+            type: 'string',
           },
           {
             name: 'Телефон',
             quality: '70%',
-            type: 'string'
+            type: 'string',
           },
           {
             name: 'Город',
             quality: '60%',
-            type: 'string'
-          }
-        ]
+            type: 'string',
+          },
+        ],
       },
       {
         id: 2,
         type: 'new',
-        title: 'DataSet-Items-GALS-1',
+        name: 'DataSet-Items-GALS-1',
         fields: [
           {
             name: 'Название',
             quality: '40%',
-            type: 'string'
+            type: 'string',
           },
           {
             name: 'Цена',
             quality: '70%',
-            type: 'string'
+            type: 'string',
           },
           {
             name: 'Габариты',
             quality: '60%',
-            type: 'string'
-          }
-        ]
+            type: 'string',
+          },
+        ],
       },
       {
         id: 3,
         type: 'popular',
-        title: 'DataSet-Items-GALS-2'
-      }
+        name: 'DataSet-Items-GALS-2',
+      },
     ],
     PIK: [
       {
         id: 1,
         type: 'popular',
-        title: 'DataSet-Clients-PIK-1',
+        name: 'DataSet-Clients-PIK-1',
         fields: [
           {
             name: 'ФИО',
             quality: '50%',
-            type: 'string'
+            type: 'string',
           },
           {
             name: 'Телефон',
             quality: '20%',
-            type: 'string'
-          }
-        ]
+            type: 'string',
+          },
+        ],
       },
       {
         id: 2,
         type: 'new',
-        title: 'DataSet-Items-PIK-1'
+        name: 'DataSet-Items-PIK-1',
       },
       {
         id: 3,
         type: 'popular',
-        title: 'DataSet-Items-PIK-2'
-      }
+        name: 'DataSet-Items-PIK-2',
+      },
     ],
     datahub: [
       {
@@ -310,7 +305,7 @@ const emergencyMock = {
         status: null,
         tags: {
           __typename: 'GlobalTags',
-          tags: []
+          tags: [],
         },
         description: null,
         schema: {
@@ -319,34 +314,34 @@ const emergencyMock = {
           fields: [
             {
               __typename: 'SchemaField',
-              fieldPath: 'shipment_info'
+              fieldPath: 'shipment_info',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'shipment_info.date'
+              fieldPath: 'shipment_info.date',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'shipment_info.target'
+              fieldPath: 'shipment_info.target',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'shipment_info.destination'
+              fieldPath: 'shipment_info.destination',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'shipment_info.geo_info'
+              fieldPath: 'shipment_info.geo_info',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'shipment_info.geo_info.lat'
+              fieldPath: 'shipment_info.geo_info.lat',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'shipment_info.geo_info.lng'
-            }
-          ]
-        }
+              fieldPath: 'shipment_info.geo_info.lng',
+            },
+          ],
+        },
       },
       {
         __typename: 'Dataset',
@@ -354,7 +349,7 @@ const emergencyMock = {
         status: null,
         tags: {
           __typename: 'GlobalTags',
-          tags: []
+          tags: [],
         },
         description: null,
         schema: {
@@ -363,34 +358,34 @@ const emergencyMock = {
           fields: [
             {
               __typename: 'SchemaField',
-              fieldPath: 'shipment_info'
+              fieldPath: 'shipment_info',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'shipment_info.date'
+              fieldPath: 'shipment_info.date',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'shipment_info.target'
+              fieldPath: 'shipment_info.target',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'shipment_info.destination'
+              fieldPath: 'shipment_info.destination',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'shipment_info.geo_info'
+              fieldPath: 'shipment_info.geo_info',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'shipment_info.geo_info.lat'
+              fieldPath: 'shipment_info.geo_info.lat',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'shipment_info.geo_info.lng'
-            }
-          ]
-        }
+              fieldPath: 'shipment_info.geo_info.lng',
+            },
+          ],
+        },
       },
       {
         __typename: 'Dataset',
@@ -403,24 +398,24 @@ const emergencyMock = {
               __typename: 'TagAssociation',
               tag: {
                 __typename: 'Tag',
-                name: 'Legacy'
-              }
+                name: 'Legacy',
+              },
             },
             {
               __typename: 'TagAssociation',
               tag: {
                 __typename: 'Tag',
-                name: 'lefa'
-              }
+                name: 'lefa',
+              },
             },
             {
               __typename: 'TagAssociation',
               tag: {
                 __typename: 'Tag',
-                name: 'blabla'
-              }
-            }
-          ]
+                name: 'blabla',
+              },
+            },
+          ],
         },
         description: null,
         schema: {
@@ -429,14 +424,14 @@ const emergencyMock = {
           fields: [
             {
               __typename: 'SchemaField',
-              fieldPath: 'field_foo'
+              fieldPath: 'field_foo',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'field_bar'
-            }
-          ]
-        }
+              fieldPath: 'field_bar',
+            },
+          ],
+        },
       },
       {
         __typename: 'Dataset',
@@ -449,24 +444,24 @@ const emergencyMock = {
               __typename: 'TagAssociation',
               tag: {
                 __typename: 'Tag',
-                name: 'Legacy'
-              }
+                name: 'Legacy',
+              },
             },
             {
               __typename: 'TagAssociation',
               tag: {
                 __typename: 'Tag',
-                name: 'lefa'
-              }
+                name: 'lefa',
+              },
             },
             {
               __typename: 'TagAssociation',
               tag: {
                 __typename: 'Tag',
-                name: 'blabla'
-              }
-            }
-          ]
+                name: 'blabla',
+              },
+            },
+          ],
         },
         description: null,
         schema: {
@@ -475,14 +470,14 @@ const emergencyMock = {
           fields: [
             {
               __typename: 'SchemaField',
-              fieldPath: 'field_foo'
+              fieldPath: 'field_foo',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'field_bar'
-            }
-          ]
-        }
+              fieldPath: 'field_bar',
+            },
+          ],
+        },
       },
       {
         __typename: 'Dataset',
@@ -490,7 +485,7 @@ const emergencyMock = {
         status: null,
         tags: {
           __typename: 'GlobalTags',
-          tags: []
+          tags: [],
         },
         description: null,
         schema: {
@@ -499,14 +494,14 @@ const emergencyMock = {
           fields: [
             {
               __typename: 'SchemaField',
-              fieldPath: 'user_id'
+              fieldPath: 'user_id',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'user_name'
-            }
-          ]
-        }
+              fieldPath: 'user_name',
+            },
+          ],
+        },
       },
       {
         __typename: 'Dataset',
@@ -514,7 +509,7 @@ const emergencyMock = {
         status: null,
         tags: {
           __typename: 'GlobalTags',
-          tags: []
+          tags: [],
         },
         description: null,
         schema: {
@@ -523,14 +518,14 @@ const emergencyMock = {
           fields: [
             {
               __typename: 'SchemaField',
-              fieldPath: 'user_id'
+              fieldPath: 'user_id',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'user_name'
-            }
-          ]
-        }
+              fieldPath: 'user_name',
+            },
+          ],
+        },
       },
       {
         __typename: 'Dataset',
@@ -543,10 +538,10 @@ const emergencyMock = {
               __typename: 'TagAssociation',
               tag: {
                 __typename: 'Tag',
-                name: 'test'
-              }
-            }
-          ]
+                name: 'test',
+              },
+            },
+          ],
         },
         description: null,
         schema: {
@@ -555,30 +550,30 @@ const emergencyMock = {
           fields: [
             {
               __typename: 'SchemaField',
-              fieldPath: 'user_name'
+              fieldPath: 'user_name',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'timestamp'
+              fieldPath: 'timestamp',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'user_id'
+              fieldPath: 'user_id',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'browser_id'
+              fieldPath: 'browser_id',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'session_id'
+              fieldPath: 'session_id',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'deletion_reason'
-            }
-          ]
-        }
+              fieldPath: 'deletion_reason',
+            },
+          ],
+        },
       },
       {
         __typename: 'Dataset',
@@ -591,10 +586,10 @@ const emergencyMock = {
               __typename: 'TagAssociation',
               tag: {
                 __typename: 'Tag',
-                name: 'test'
-              }
-            }
-          ]
+                name: 'test',
+              },
+            },
+          ],
         },
         description: null,
         schema: {
@@ -603,30 +598,30 @@ const emergencyMock = {
           fields: [
             {
               __typename: 'SchemaField',
-              fieldPath: 'user_name'
+              fieldPath: 'user_name',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'timestamp'
+              fieldPath: 'timestamp',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'user_id'
+              fieldPath: 'user_id',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'browser_id'
+              fieldPath: 'browser_id',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'session_id'
+              fieldPath: 'session_id',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'deletion_reason'
-            }
-          ]
-        }
+              fieldPath: 'deletion_reason',
+            },
+          ],
+        },
       },
       {
         __typename: 'Dataset',
@@ -640,22 +635,22 @@ const emergencyMock = {
           fields: [
             {
               __typename: 'SchemaField',
-              fieldPath: 'event_name'
+              fieldPath: 'event_name',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'event_data'
+              fieldPath: 'event_data',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'timestamp'
+              fieldPath: 'timestamp',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'browser'
-            }
-          ]
-        }
+              fieldPath: 'browser',
+            },
+          ],
+        },
       },
       {
         __typename: 'Dataset',
@@ -669,22 +664,22 @@ const emergencyMock = {
           fields: [
             {
               __typename: 'SchemaField',
-              fieldPath: 'event_name'
+              fieldPath: 'event_name',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'event_data'
+              fieldPath: 'event_data',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'timestamp'
+              fieldPath: 'timestamp',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: 'browser'
-            }
-          ]
-        }
+              fieldPath: 'browser',
+            },
+          ],
+        },
       },
       {
         __typename: 'Dataset',
@@ -692,7 +687,7 @@ const emergencyMock = {
         status: null,
         tags: {
           __typename: 'GlobalTags',
-          tags: []
+          tags: [],
         },
         description: null,
         schema: {
@@ -701,18 +696,18 @@ const emergencyMock = {
           fields: [
             {
               __typename: 'SchemaField',
-              fieldPath: '[version=2.0].[type=boolean].field_foo_2'
+              fieldPath: '[version=2.0].[type=boolean].field_foo_2',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: '[version=2.0].[type=boolean].field_bar'
+              fieldPath: '[version=2.0].[type=boolean].field_bar',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: '[version=2.0].[key=True].[type=int].id'
-            }
-          ]
-        }
+              fieldPath: '[version=2.0].[key=True].[type=int].id',
+            },
+          ],
+        },
       },
       {
         __typename: 'Dataset',
@@ -720,7 +715,7 @@ const emergencyMock = {
         status: null,
         tags: {
           __typename: 'GlobalTags',
-          tags: []
+          tags: [],
         },
         description: null,
         schema: {
@@ -729,19 +724,19 @@ const emergencyMock = {
           fields: [
             {
               __typename: 'SchemaField',
-              fieldPath: '[version=2.0].[type=boolean].field_foo_2'
+              fieldPath: '[version=2.0].[type=boolean].field_foo_2',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: '[version=2.0].[type=boolean].field_bar'
+              fieldPath: '[version=2.0].[type=boolean].field_bar',
             },
             {
               __typename: 'SchemaField',
-              fieldPath: '[version=2.0].[key=True].[type=int].id'
-            }
-          ]
-        }
-      }
-    ]
-  }
-}
+              fieldPath: '[version=2.0].[key=True].[type=int].id',
+            },
+          ],
+        },
+      },
+    ],
+  },
+};
